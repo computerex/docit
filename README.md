@@ -39,6 +39,8 @@ To run the app, follow these steps.
 
 > The Skeleton App uses [BrowserSync](http://www.browsersync.io/) for automated page refreshes on code/markup changes concurrently across multiple browsers. If you prefer to disable the mirroring feature set the [ghostMode option](http://www.browsersync.io/docs/options/#option-ghostMode) to false
 
+8. Use /elastic/seed.py to index documents with elasticsearch. Pass in the input directory as an argument. 
+
 ## Running The App under Electron
 
 To run the app under [Electron](http://electron.atom.io), follow these steps.
