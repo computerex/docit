@@ -74,6 +74,3 @@ function replaceInDocuments(phrase, replace) {
 // 		console.log(hit._source.text);
 // 	}
 // });
-//replaceInDocuments("8014", " ");
-replaceInDocuments("your company", " ");
-//replaceInDocuments("Recovery Co", " ");
