@@ -1,0 +1,11 @@
+<template>
+  <section>
+    <h2>${doc._id}</h2>
+  </section>
+  <section>
+    <a target="_blank" href.bind="similarUrl">Find similar documents</a>
+  </section>
+  <section>
+    <pre>${doc._source.text}</pre>
+  </section>  
+</template>

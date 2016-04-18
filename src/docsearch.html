@@ -1,0 +1,27 @@
+<template>
+  <require from="components/paginator"></require>
+  <require from="components/documentlist"></require>
+
+  <section class="au-animate">
+    <h2>${heading}</h2>
+  </section>
+  <section>
+    <form submit.delegate="search()">
+      <div class="row">
+        <div class="col-xs-12">
+          <input value.bind="searchPhrase" type="text" class="form-control" placeholder="enter search keywords" />
+        </div>
+      </div>
+      <br />
+      <div class="row">
+        <div class="col-xs-12">
+          <button type="submit" class="btn btn-primary" click.delegate="search()">Search</button>
+        </div>
+      </div>
+    </form>
+    <br />
+    <paginator max-pages=100 paginate-refresh-event="docSeachPaginateRefresh" paginate-event="docSearchPaginate" pagesize="100" total.bind="searchResults.hits.total"></paginator>
+   
+    <documentlist search-results.bind="searchResults"></documentlist>
+  </section>
+</template>

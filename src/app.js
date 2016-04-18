@@ -3,8 +3,10 @@ export class App {
     config.title = 'docit';
     config.map([
       { route: ['', 'welcome'], name: 'welcome',      moduleId: 'welcome',      nav: true, title: 'Welcome' },
-      { route: 'users',         name: 'users',        moduleId: 'users',        nav: true, title: 'Github Users' },
-      { route: 'child-router',  name: 'child-router', moduleId: 'child-router', nav: true, title: 'Child Router' }
+      { route: ['docsearch'], name: 'docsearch', moduleId: 'docsearch', nav: true, title: 'Document Search'},
+      { route: ['document'], name: 'docview', moduleId: 'docview', nav: false, title: 'Document'},
+      { route: ['buckets'], name: 'bucketmanager', moduleId: 'components/bucketmanager', nav: true, title: 'Bucket Manager'},
+      { route: ['similar'], name: 'similardocs', 'moduleId': 'similardocs', nav: false, title: 'Similar Docs'}
     ]);
 
     this.router = router;

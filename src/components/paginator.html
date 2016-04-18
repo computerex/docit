@@ -1,0 +1,22 @@
+<template>
+	<div>
+		<form>
+			<div class="row">
+				<div class="col-xs-2">
+					<input class="form-control" value.two-way="pagen" type="text" />
+				</div>
+				<div class="col-xs-1">
+					<strong>of</strong>
+				</div>
+				<div class="col-xs-3">
+					<input disabled class="form-control" value.bind="numpages" type="text" />
+				</div>
+			</div>
+			<button click.delegate="paginate(pagen-1)" type="submit" show.bind="false" />
+		</form>
+		<!--
+		<ul class="pagination">
+			<li click.delegate="paginate(index)" repeat.for="index of numpages"><a href="#">${index+1}</a></li>
+		</ul> -->
+	</div>
+</template>

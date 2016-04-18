@@ -1,0 +1,22 @@
+<template>
+	<small>${searchResults.hits.total} results found in ${searchResults.took} ms</small>
+	<hr />
+    <div repeat.for="result of searchResults.hits.hits">
+      <div class="row">  
+        <div class="col-xs-12">
+          <a target="_blank" href.bind="getLink(result)"><h4>${result._id}</h4></a>
+        </div>
+      </div>
+
+      <div show.bind="result.highlight==null">
+      	<p>${result._source.text}</p>
+      </div>
+      
+      <div show.bind="result.highlight!=null" class="row" repeat.for="hit of result.highlight.text">
+        <div class="col-xs-12">
+          <p innerHTML.bind="hit" class="highlight">
+          </p>
+        </div>
+      </div>
+    </div>
+</template>
