@@ -1,4 +1,4 @@
-# aurelia-skeleton-navigation
+# DocIt - Document Management
 
 ## Running The App
 
